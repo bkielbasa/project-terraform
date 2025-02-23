@@ -8,6 +8,11 @@ resource "random_string" "suffix" {
   special = false
 }
 
+resource "random_string" "prefix" {
+  length  = 8
+  special = false
+}
+
 # Example usage of provisioners (not recommended for production)
 resource "null_resource" "test_cleanup" {
   provisioner "local-exec" {
